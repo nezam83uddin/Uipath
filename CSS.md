@@ -1,4 +1,4 @@
-# About Design<a id="sec-3" name="sec-3"></a>
+# CSS Selector
 
 
 |tagName[attributename=attributeValue]|
@@ -14,3 +14,11 @@
 |form>label>input[id=PersistentCookie]|
 |div[class$=Error i]|
 |<webctrl aaname='First name:' css-selector='label:nth-of-type(4)' />|
+
+
+# CSS Selector Link
+https://www.seleniumeasy.com/selenium-tutorials/css-selectors-tutorial-for-selenium-with-examples
+https://www.swtestacademy.com/css-selenium/#:~:text=13)%20Using%20*%3Alast%2Dof,child%20of%20the%20parent%20tag.&text=Example-,Syntax%3A%20.,parent%20tag%20%E2%80%9Cul%E2%80%9D.)
+https://developer.mozilla.org/en-US/docs/Web/CSS/:nth-last-child
+https://youtu.be/1pYN3q4n_lU?t=423
+https://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_win_open
