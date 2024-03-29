@@ -1,13 +1,13 @@
-# About LinQ<a id="sec-3" name="sec-3"></a>
+
+
+# List
+
 
 <p align="center">
   <a href="https://www.youtube.com/watch?v=VV89AhYODOE&list=PLl1rPImyc34cqVn6_o4CAV9jVFHR1Rk2e&index=3">
     <img src="https://img.youtube.com/vi/VV89AhYODOE/0.jpg" alt="JavaScript Tutorial For Beginners" />
   </a>
 </p>
-
-
-# List
 
 ```sh
 sbt clean coverage test
