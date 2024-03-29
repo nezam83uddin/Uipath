@@ -8,6 +8,8 @@
 
 # DateTime Systax
 
+ডাটা টেবিল থেকে বিভিন্ন ফরমেটের তারিখ ফিল্টার :
+
 ```scala
 ImmunizationDT= (from row In immunizationdt Order By DateTime.ParseExact(row(0).ToString, "MM/dd/yyyy", System.Globalization.CultureInfo.InvariantCulture) Ascending Select row).CopyToDataTable
 ```
