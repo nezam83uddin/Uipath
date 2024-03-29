@@ -14,6 +14,30 @@ strPdfText.Split({Environment.NewLine},StringSplitOptions.None)
 ```
 
 ```scala
+str_Vaccine = System.Text.RegularExpressions.Regex.Replace(str_Vaccine,"\s+"," ",System.Text.RegularExpressions.RegexOptions.Multiline).Trim
+```
+
+```scala
+str_Vaccine = String.Join(vbCrLf,str_Vaccine.Split(Environment.NewLine.ToArray,StringSplitOptions.RemoveEmptyEntries))
+```
+
+```scala
+str_Vaccine = System.Text.RegularExpressions.Regex.Replace(str_Vaccine,"^-"," ",System.Text.RegularExpressions.RegexOptions.Multiline).Trim
+```
+
+```scala
+str_Vaccine = System.Text.RegularExpressions.Regex.Replace(str_Vaccine,"-$"," ",System.Text.RegularExpressions.RegexOptions.Multiline).Trim
+```
+
+```scala
+str_DateField = split(str_RowText,environment.newline)(0)
+```
+
+```scala
+str_RowText = string.join(environment.newline,CurrentRow.ItemArray)
+```
+
+```scala
 arrStrSplit.Reverse.ToArray
 ```
 
