@@ -1,24 +1,15 @@
-# About ReFramwork<a id="sec-3" name="sec-3"></a>
+# About 
 
 
-# Condtion
-
+## Condition in state
 ```scala
-IsNothing(out_TransactionData) or out_TransactionData.RowCount = 0
+Successfull = SystemException is Nothing And BusinessException is Nothing
 ```
 
 ```scala
-io_TransactionData.RowCount >= in_TransactionNumber
+Exception = SystemException isNot Nothing or BusinessException IsNot Nothing
 ```
 
-# o_str_TransactionItem
-
 ```scala
-io_TransactionData.Rows(in_TransactionNumber-1).Item("Trans1").ToString
-```
-
-# o_str_TransactionItemRequire
-
-```scala
-Convert.ToBoolean(io_TransactionData.Rows(in_TransactionNumber-1).Item("IsRequired"))
+Log Message = if(SystemException IsNot Nothing, "System exception at initialization: " + SystemException.Message + " at Source: " + SystemException.Source, "Business exception at initialization: " + BusinessException.Message + " at Source: " + BusinessException.Source)
 ```
