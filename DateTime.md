@@ -1,3 +1,17 @@
- # About Sheet18<a id="sec-3" name="sec-3"></a>
+# DateTime
 
- new DriveInfo("D").IsReady
+<p align="center">
+  <a href="https://www.youtube.com/watch?v=VV89AhYODOE&list=PLl1rPImyc34cqVn6_o4CAV9jVFHR1Rk2e&index=3">
+    <img src="https://img.youtube.com/vi/VV89AhYODOE/0.jpg" alt="JavaScript Tutorial For Beginners" />
+  </a>
+</p>
+
+# DateTime Systax
+
+```scala
+ImmunizationDT= (from row In immunizationdt Order By DateTime.ParseExact(row(0).ToString, "MM/dd/yyyy", System.Globalization.CultureInfo.InvariantCulture) Ascending Select row).CopyToDataTable
+```
+
+```scala
+ImmunizationDT= (from row In immunizationdt Order By DateTime.ParseExact(row(0).ToString, "M/d/yyyy", System.Globalization.CultureInfo.InvariantCulture) Ascending Select row).CopyToDataTable
+```
