@@ -1,8 +1,16 @@
-# About Command<a id="sec-3" name="sec-3"></a>
+# Uipath Assistance
 
 
-# shell:startup
+# Place Uipath Assistance in Startup
 
 ```scala
-C:\Users\sajib\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup
+shell:startup
+```
+
+```scala
+%appdata%
+```
+
+```scala
+UIPATH_USER_SERVICE_PATH = C:\Users\Sajib\AppData\Local\Programs\UiPath\Studio\UiPath.Service.UserHost.exe
 ```
