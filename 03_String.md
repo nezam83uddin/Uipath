@@ -3,6 +3,13 @@
 String Manipulation ([Link.....](https://forum.uipath.com/t/how-to-manipulate-a-part-of-string-split-trim-substring-replace-remove-left-right/140180))
 
 
+### Removing Special Character 
+```scala
+System.Text.RegularExpressions.Regex.Replace(variable, "[^a-z A-Z 0-9]", "")
+
+```
+
+
 ```scala
 strPdfText.Split({Environment.NewLine},StringSplitOptions.None)
 
