@@ -1,7 +1,5 @@
-# About Exception<a id="sec-3" name="sec-3"></a>
 
-
-# List
+## List
 
 ```scala
 new Exception(String.Format("The asset name [{0}] doesn't exist or no access", "ConfigPath"))
