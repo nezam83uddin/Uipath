@@ -23,7 +23,7 @@ String.Join(" ", regexMatch.Cast(Of match).Select(function(d) d.ToString).ToArra
 ```scala
 (from item in lstNewData where item.Contains("3059 Subtotal") or item.Contains("8155 Subtotal")).ToList
 ```
-## arr_Rows
+### arr_Rows
 
 
 ```scala
@@ -37,7 +37,7 @@ Where CDate(row("Date").ToString) >= Date.Today.AddDays(-11) And CDate(row("Date
 ```scala
 Select row).ToArray
 ```
-## str_Row
+### str_Row
 
 
 ```scala
@@ -50,7 +50,7 @@ Dt.Rows(2).itemArray
 
 
 
-## groupRows
+### groupRows
 
 
 ```scala
@@ -70,7 +70,7 @@ targetLine.ToLower.Contains(parserKeywords(index).ToLower)
 ```
 
 
-## DataTable
+### DataTable
 
 
 ```scala
@@ -78,7 +78,7 @@ customersDT.AsEnumerable().Where(Function (row) row("First Name").ToString().Sta
 ```
 
 
-## int
+### int
 
 
 ```scala
@@ -86,7 +86,7 @@ customersDT.AsEnumerable().Min(Function (row) row("First Name").ToString().Lengt
 ```
 
 
-## DataTable
+### DataTable
 
 
 ```scala
@@ -106,14 +106,14 @@ dt_OutPutDataTable_Email.AsEnumerable().Take(7).CopyToDataTable
 ```
 
 
-## array
+### array
 
 
 ```scala
 dt_items.AsEnumerable().Select(Function(x) x.Field(Of String)("name")).Distinct().ToArray()
 ```
 
-## list
+### list
 
 
 ```scala
@@ -185,7 +185,7 @@ dt_items.AsEnumerable().GroupBy(Function(row) row.Field(Of string)("id")).Select
 ```
 
 
-## Double
+### Double
 
 
 ```scala
@@ -194,7 +194,7 @@ dt_items.AsEnumerable().Sum(Function(x) Convert.ToDouble(x.Field(Of Object)("id"
 
 
 
-## IEnu - DataRow
+### IEnu - DataRow
 
 
 ```scala
