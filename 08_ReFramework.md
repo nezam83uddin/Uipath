@@ -1,6 +1,6 @@
 # ReFramwork
 
-## For Using in the Condition in state
+### For Using in the Condition in state
 ```scala
 Successfull = SystemException is Nothing And BusinessException is Nothing
 ```
@@ -13,7 +13,7 @@ Exception = SystemException isNot Nothing or BusinessException IsNot Nothing
 Log Message = if(SystemException IsNot Nothing, "System exception at initialization: " + SystemException.Message + " at Source: " + SystemException.Source, "Business exception at initialization: " + BusinessException.Message + " at Source: " + BusinessException.Source)
 ```
 
-## For GetTransaction Data
+### For GetTransaction Data
 
 |Variable Type|Syntax|
 |:----|:----|
