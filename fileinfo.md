@@ -1,7 +1,5 @@
-# About fileinfo<a id="sec-3" name="sec-3"></a>
 
-
-# fileinfo
+## Fileinfo
 
 ```sh
 sbt clean coverage test
@@ -12,7 +10,7 @@ new FileInfo(ConfigPath).DirectoryName
 ```
 
 ```scala
-String.Format("*ADV_ToC_{0}.csv", in_ProcessDate.ToString("yyMMdd"))
+String.Format("*Test_ToC_{0}.csv", in_ProcessDate.ToString("yyMMdd"))
 ```
 
 ```scala
