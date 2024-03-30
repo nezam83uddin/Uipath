@@ -19,3 +19,10 @@ You can read more ([https://github.com/rpa92/uipath/blob/main/README.md](https:/
 
 ### Sample Table Creation in md format
 https://markdown-convert.com/en/tool/table
+
+
+### Sample Table Creation 
+|Variable Type|Syntax|Reason For Uses|
+|:----|:----|:----|
+|fileinfo_FileName|new FileInfo(ConfigPath).DirectoryName|Deleting all space, comma, tab and new line from String, Deleting all space, comma, tab and new line from String, Deleting all space, comma, tab and new line from String,|
+
