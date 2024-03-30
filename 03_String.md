@@ -12,10 +12,12 @@ strPdfText.Split({Environment.NewLine},StringSplitOptions.None)
 |fileinfo_FileName|new FileInfo(ConfigPath).DirectoryName|Deleting all space, comma, tab and new line from String, Deleting all space, comma, tab and new line from String, Deleting all space, comma, tab and new line from String,|
 
 
+### Adding Leading Zero
 
+```scala
+CInt("".ToString).ToString("000000000")
 
-
-
+```
 
 
 
