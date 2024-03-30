@@ -1,7 +1,7 @@
-## DateTime
+## 1. DateTime
 
 
-### Filter different formation of date
+### 2. Filter different formation of date
 
 ```scala
 ImmunizationDT= (from row In immunizationdt Order By DateTime.ParseExact(row(0).ToString, "MM/dd/yyyy", System.Globalization.CultureInfo.InvariantCulture) Ascending Select row).CopyToDataTable
@@ -11,11 +11,11 @@ ImmunizationDT= (from row In immunizationdt Order By DateTime.ParseExact(row(0).
 ImmunizationDT= (from row In immunizationdt Order By DateTime.ParseExact(row(0).ToString, "M/d/yyyy", System.Globalization.CultureInfo.InvariantCulture) Ascending Select row).CopyToDataTable
 ```
 
-### Taking 1st 7th row from DataTable
+### 3. Taking 1st 7th row from DataTable
 ```scala
 ImmunizationDT= dt_OutPutDataTable_Email.AsEnumerable().Take(7).CopyToDataTable
 ```
-### Get all Dates between “28.11.2019” and “03.01.2020” as String
+### 4. Get all Dates between “28.11.2019” and “03.01.2020” as String
 You can read more ([Click this link...]([https://github.com/rpa92/uipath/blob/main/README.md](https://forum.uipath.com/t/get-all-dates-between-28-11-2019-and-03-01-2020-as-string/143774/4)))
 
 ```scala
