@@ -7,8 +7,11 @@ String Manipulation ([Link.....](https://forum.uipath.com/t/how-to-manipulate-a-
 strPdfText.Split({Environment.NewLine},StringSplitOptions.None)
 
 ```
-|fileinfo|new FileInfo(ConfigPath).DirectoryName|
-|:----|:----|
+|fileinfo_FileName|new FileInfo(ConfigPath).DirectoryName|Deleting all space, comma, tab and new line from String|
+|:----|:----|:----|
+
+
+
 
 
 ```scala
