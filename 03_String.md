@@ -21,9 +21,7 @@ CInt("".ToString).ToString("000000000")
 
 
 
-```scala
-str_Vaccine = System.Text.RegularExpressions.Regex.Replace(str_Vaccine,"\s+"," ",System.Text.RegularExpressions.RegexOptions.Multiline).Trim
-```
+
 
 ```scala
 String.Format("*Test_ToC_{0}.csv", in_ProcessDate.ToString("yyMMdd"))
@@ -32,7 +30,13 @@ String.Format("*Test_ToC_{0}.csv", in_ProcessDate.ToString("yyMMdd"))
 ```scala
 str_Vaccine = String.Join(vbCrLf,str_Vaccine.Split(Environment.NewLine.ToArray,StringSplitOptions.RemoveEmptyEntries))
 ```
+```scala
+str_Vaccine = System.Text.RegularExpressions.Regex.Replace(str_Vaccine,"\s+"," ",System.Text.RegularExpressions.RegexOptions.Multiline).Trim
+```
+```scala
+str_Vaccine =System.Text.RegularExpressions.Regex.Replace(strPdfText,"\s+"," ",System.Text.RegularExpressions.RegexOptions.Singleline).Trim
 
+```
 ```scala
 str_Vaccine = System.Text.RegularExpressions.Regex.Replace(str_Vaccine,"^-"," ",System.Text.RegularExpressions.RegexOptions.Multiline).Trim
 ```
