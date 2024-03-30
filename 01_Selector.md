@@ -1,10 +1,13 @@
 ## Selector
-fuzzy Selectors Video  ([https://youtu.be/1pYN3q4n_lU?t=422](https://youtu.be/1pYN3q4n_lU?t=422))
+Fuzzy Selectors Video  ([https://youtu.be/1pYN3q4n_lU?t=422](https://youtu.be/1pYN3q4n_lU?t=422))
 ### Title
 ```java
 title='abc*' casesensitive:title='false' />
 ```
-
+### CSS Selector
+```java
+css-selector='span[uipath_custom_id="12"]' 
+```
 
 ### Fuzzy Selector
 ```java
