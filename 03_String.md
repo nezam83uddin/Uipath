@@ -6,6 +6,9 @@ String Manipulation ([Link.....](https://forum.uipath.com/t/how-to-manipulate-a-
 ```scala
 strPdfText.Split({Environment.NewLine},StringSplitOptions.None)
 ```
+|Variable Type|Syntax|
+|:----|:----|
+|fileinfo|new FileInfo(ConfigPath).DirectoryName|
 
 ```scala
 str_Vaccine = System.Text.RegularExpressions.Regex.Replace(str_Vaccine,"\s+"," ",System.Text.RegularExpressions.RegexOptions.Multiline).Trim
