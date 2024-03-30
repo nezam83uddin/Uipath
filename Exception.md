@@ -4,7 +4,7 @@
 # List
 
 ```scala
-new Exception(String.Format("The asset name [{0}] doesn't exist or no access", "AARP.AF.GV.BofA.Config"))
+new Exception(String.Format("The asset name [{0}] doesn't exist or no access", "ConfigPath"))
 ```
 
 ```scala
