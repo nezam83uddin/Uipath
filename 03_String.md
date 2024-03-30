@@ -27,21 +27,21 @@ CInt("".ToString).ToString("000000000")
 String.Format("*Test_ToC_{0}.csv", in_ProcessDate.ToString("yyMMdd"))
 ```
 
-```scala
+```java
 str_Vaccine = String.Join(vbCrLf,str_Vaccine.Split(Environment.NewLine.ToArray,StringSplitOptions.RemoveEmptyEntries))
 ```
-```scala
+```java
 str_Vaccine = System.Text.RegularExpressions.Regex.Replace(str_Vaccine,"\s+"," ",System.Text.RegularExpressions.RegexOptions.Multiline).Trim
 ```
-```scala
+```java
 str_Vaccine =System.Text.RegularExpressions.Regex.Replace(strPdfText,"\s+"," ",System.Text.RegularExpressions.RegexOptions.Singleline).Trim
 
 ```
-```scala
+```java
 str_Vaccine = System.Text.RegularExpressions.Regex.Replace(str_Vaccine,"^-"," ",System.Text.RegularExpressions.RegexOptions.Multiline).Trim
 ```
 
-```scala
+```java
 str_Vaccine = System.Text.RegularExpressions.Regex.Replace(str_Vaccine,"-$"," ",System.Text.RegularExpressions.RegexOptions.Multiline).Trim
 ```
 
