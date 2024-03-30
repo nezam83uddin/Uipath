@@ -17,5 +17,5 @@ You can read more ([https://github.com/rpa92/uipath/blob/main/README.md](https:/
   </a>
 </p>
 
-### Sample Table Creation
+### Sample Table Creation in md format
 https://markdown-convert.com/en/tool/table
