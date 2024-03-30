@@ -1,47 +1,29 @@
 
 
-# List
-
-
-<p align="center">
-  <a href="https://www.youtube.com/watch?v=VV89AhYODOE&list=PLl1rPImyc34cqVn6_o4CAV9jVFHR1Rk2e&index=3">
-    <img src="https://img.youtube.com/vi/VV89AhYODOE/0.jpg" alt="JavaScript Tutorial For Beginners" />
-  </a>
-</p>
-
-```sh
-sbt clean coverage test
-```
-
+## List 
+কিভাবে লিষ্ট ব্যবহার করতে হয় আমরা এখান থেকে দেখে নিবো।
 ```scala
 dtWhitelistData.Select().Where(Function(x) x.Item("DomainName").ToString.ToLower.Equals(emailSenderHost.ToLower)).ToArray
 ```
-
 ```scala
 dtData.AsEnumerable.Where(Function (x) x("CCode").toString.Trim.ToUpper.Equals(strCCFilter.ToUpper)).ToList
 ```
-
 ```scala
 (from item in arrStrSplit where Not item.Contains("Page")).ToArray
 ```
-
 ```scala
 (from item in arrStrSplit where Not String.IsNullOrWhiteSpace(item.Trim)).ToArray
 ```
-
 ```scala
 String.Join(" ", regexMatch.Cast(Of match).Select(function(d) d.ToString).ToArray)
 ```
-
 ```scala
 (from item in lstNewData where item.Contains("3059 Subtotal") or item.Contains("8155 Subtotal")).ToList
 ```
-
 ```scala
 (from item in lstNewData where item.Contains("3059 Subtotal") or item.Contains("8155 Subtotal")).ToList
 ```
-
-# arr_Rows
+## arr_Rows
 
 
 ```scala
@@ -55,10 +37,7 @@ Where CDate(row("Date").ToString) >= Date.Today.AddDays(-11) And CDate(row("Date
 ```scala
 Select row).ToArray
 ```
-
-
-
-# str_Row
+## str_Row
 
 
 ```scala
@@ -71,7 +50,7 @@ Dt.Rows(2).itemArray
 
 
 
-# groupRows
+## groupRows
 
 
 ```scala
@@ -91,7 +70,7 @@ targetLine.ToLower.Contains(parserKeywords(index).ToLower)
 ```
 
 
-# DataTable
+## DataTable
 
 
 ```scala
@@ -99,7 +78,7 @@ customersDT.AsEnumerable().Where(Function (row) row("First Name").ToString().Sta
 ```
 
 
-# int
+## int
 
 
 ```scala
@@ -107,7 +86,7 @@ customersDT.AsEnumerable().Min(Function (row) row("First Name").ToString().Lengt
 ```
 
 
-# DataTable
+## DataTable
 
 
 ```scala
@@ -127,14 +106,14 @@ dt_OutPutDataTable_Email.AsEnumerable().Take(7).CopyToDataTable
 ```
 
 
-# array
+## array
 
 
 ```scala
 dt_items.AsEnumerable().Select(Function(x) x.Field(Of String)("name")).Distinct().ToArray()
 ```
 
-# list
+## list
 
 
 ```scala
@@ -206,7 +185,7 @@ dt_items.AsEnumerable().GroupBy(Function(row) row.Field(Of string)("id")).Select
 ```
 
 
-# Double
+## Double
 
 
 ```scala
@@ -215,7 +194,7 @@ dt_items.AsEnumerable().Sum(Function(x) Convert.ToDouble(x.Field(Of Object)("id"
 
 
 
-# IEnu - DataRow
+## IEnu - DataRow
 
 
 ```scala
@@ -229,29 +208,3 @@ customersDT.AsEnumerable.Where(Function (row) row.Field(Of String)("Email").Cont
 ```scala
 dt.AsEnumerable().Where(Function(row) row("ColName").ToString="abc").CopyToDataTable()
 ```
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-You can read more ([https://github.com/rpa92/uipath/blob/main/README.md](https://github.com/rpa92/uipath/blob/main/README.md))
-
-# Conclusion<a id="sec-3" name="sec-3"></a>
-
-While you may want to structure your projects different. This set up works and is the one that I will continue to update. If you want to contribute please feel free to submit a pull request!
