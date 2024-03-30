@@ -9,7 +9,10 @@ strPdfText.Split({Environment.NewLine},StringSplitOptions.None)
 ```
 |Variable Type|Syntax|Reason For Uses|
 |:----|:----|:----|
-|fileinfo_FileName|new FileInfo(ConfigPath).DirectoryName|Deleting all space, comma, tab and new line from String, Deleting all space, comma, tab and new line from String, Deleting all space, comma, tab and new line from String,|
+|fileinfo_FileName|new FileInfo(ConfigPath).DirectoryName|Deleting all space, comma, tab and new line from String, Deleting all space, comma,
+ tab and new line from String, Deleting all space, comma, tab and new line from String, |
+| |String.Format("*ADV_ToC_{0}.csv", in_ProcessDate.ToString("yyMMdd"))| |
+
 
 
 
