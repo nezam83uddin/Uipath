@@ -12,6 +12,10 @@ str_Vaccine = System.Text.RegularExpressions.Regex.Replace(str_Vaccine,"\s+"," "
 ```
 
 ```scala
+String.Format("*Test_ToC_{0}.csv", in_ProcessDate.ToString("yyMMdd"))
+```
+
+```scala
 str_Vaccine = String.Join(vbCrLf,str_Vaccine.Split(Environment.NewLine.ToArray,StringSplitOptions.RemoveEmptyEntries))
 ```
 
