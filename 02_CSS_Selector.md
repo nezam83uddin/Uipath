@@ -1,6 +1,5 @@
 # CSS Selector
 
-
 |tagName[attributename=attributeValue]|
 |:----|
 |Example 1: input[id=email]|
