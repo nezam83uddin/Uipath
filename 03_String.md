@@ -5,6 +5,9 @@ String Manipulation ([Link.....](https://forum.uipath.com/t/how-to-manipulate-a-
 
 ```scala
 strPdfText.Split({Environment.NewLine},StringSplitOptions.None)
+|fileinfo|new FileInfo(ConfigPath).DirectoryName|
+|:----|:----|
+
 ```
 |fileinfo|new FileInfo(ConfigPath).DirectoryName|
 |:----|:----|
