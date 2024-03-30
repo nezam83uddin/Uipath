@@ -15,3 +15,33 @@ ImmunizationDT= (from row In immunizationdt Order By DateTime.ParseExact(row(0).
 ```scala
 ImmunizationDT= dt_OutPutDataTable_Email.AsEnumerable().Take(7).CopyToDataTable
 ```
+### Get all Dates between “28.11.2019” and “03.01.2020” as String
+You can read more ([Click this link...]([https://github.com/rpa92/uipath/blob/main/README.md](https://forum.uipath.com/t/get-all-dates-between-28-11-2019-and-03-01-2020-as-string/143774/4)))
+
+```scala
+
+in_str_date = “28.11.2019”
+out-str_date = “03.01.2020”
+
+there are totally four steps
+–assign activity
+–while loop
+–assign activity
+–writeline activity
+
+the steps involved are
+–in a assign activity like this
+
+final_date = Datetime.ParseExact(in_date,“dd.MM.yyyy”,system.globalization.cultureinfo.invariantculture)
+
+where final_date is a datetime variable
+
+–now use a while loop and mention condition like this
+final_date > Datetime.ParseExact(out_date,“dd.MM.yyyy”,system.globalization.cultureinfo.invariantculture)
+
+–inside the loop use a assign activity like this
+Final_date = Datetime.ParseExact(Final_date,“dd.MM.yyyy”,system.globalization.cultureinfo.invariantculture).AddDays(1)
+
+–now use a write line activity and mention like this
+Final_date.ToString(“dd.MM.yyyy”)
+```
