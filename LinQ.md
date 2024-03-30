@@ -1,7 +1,7 @@
 
 
 ### List 
-কিভাবে লিষ্ট ব্যবহার করতে হয় আমরা এখান থেকে দেখে নিবো।
+
 ```scala
 dtWhitelistData.Select().Where(Function(x) x.Item("DomainName").ToString.ToLower.Equals(emailSenderHost.ToLower)).ToArray
 ```
