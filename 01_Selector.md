@@ -2,6 +2,11 @@
 
 fuzzy Selectors Video  ([https://youtu.be/1pYN3q4n_lU?t=422](https://youtu.be/1pYN3q4n_lU?t=422))
 
-```scala
+```java
 title='abc*' casesensitive:title='false' />
 ```
+
+```java
+aaname='Monitoring' matching:aaname='fuzzy' fuzzylevel:aaname='0.8'
+```
+
