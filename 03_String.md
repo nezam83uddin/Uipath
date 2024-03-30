@@ -9,15 +9,8 @@ System.Text.RegularExpressions.Regex.Replace(variable, "[^a-z A-Z 0-9]", "")
 
 ```
 
-
 ```scala
 strPdfText.Split({Environment.NewLine},StringSplitOptions.None)
-
-```
-|Variable Type|Syntax|Reason For Uses|
-|:----|:----|:----|
-|fileinfo_FileName|new FileInfo(ConfigPath).DirectoryName|Deleting all space, comma, tab and new line from String, Deleting all space, comma, tab and new line from String, Deleting all space, comma, tab and new line from String,|
-
 
 ### Adding Leading Zero
 
