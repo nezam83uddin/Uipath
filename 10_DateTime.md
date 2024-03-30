@@ -1,7 +1,7 @@
-# DateTime
+## DateTime
 
 
-# Filter different formation of date
+### Filter different formation of date
 
 ```scala
 ImmunizationDT= (from row In immunizationdt Order By DateTime.ParseExact(row(0).ToString, "MM/dd/yyyy", System.Globalization.CultureInfo.InvariantCulture) Ascending Select row).CopyToDataTable
@@ -11,7 +11,7 @@ ImmunizationDT= (from row In immunizationdt Order By DateTime.ParseExact(row(0).
 ImmunizationDT= (from row In immunizationdt Order By DateTime.ParseExact(row(0).ToString, "M/d/yyyy", System.Globalization.CultureInfo.InvariantCulture) Ascending Select row).CopyToDataTable
 ```
 
-# Taking 1st 7th row from DataTable
+### Taking 1st 7th row from DataTable
 ```scala
 ImmunizationDT= dt_OutPutDataTable_Email.AsEnumerable().Take(7).CopyToDataTable
 ```
