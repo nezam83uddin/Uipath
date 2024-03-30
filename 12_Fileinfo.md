@@ -27,3 +27,8 @@ File.Exists
 Directory.Exists
 
 ```
+
+```scala
+arr_str_FileDirectory = Directory.GetFiles(str_FileName,"*xlsx")
+
+```
