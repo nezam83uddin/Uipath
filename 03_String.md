@@ -20,7 +20,10 @@ strPdfText.Split({Environment.NewLine},StringSplitOptions.None)
 CInt("".ToString).ToString("000000000")
 
 ```
+```scala
+CurrentRow.Item("str_Name").ToString.PadLeft(9,"0"c)
 
+```
 
 
 
