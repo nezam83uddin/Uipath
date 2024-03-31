@@ -19,3 +19,9 @@ New Dictionary(of System.Double, Object)
 ```java
 New System.Data.DataTable
 ```
+
+### DataRow
+```java
+data_row_Name=dt_Name.NewRow
+CurrentItem("TestRow")="test"
+```
