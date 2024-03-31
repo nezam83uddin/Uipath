@@ -32,3 +32,8 @@ Directory.Exists
 arr_str_FileDirectory = Directory.GetFiles(str_FileName,"*xlsx")
 
 ```
+
+```scala
+File.Exists(Path.combine(in_Config("InputFolderPath").ToString,in_Config("FileName").ToString))
+
+```
