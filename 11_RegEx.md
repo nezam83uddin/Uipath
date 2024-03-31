@@ -8,7 +8,8 @@ Regular Expressions ([https://regex101.com/r/bSpvIF/1](https://regex101.com/r/bS
 
 ### Getting All value after extracting from the web page
 ```java
-"\s*(.*)"
+IEnu<Match>_last_line_fields="\s*(.*)"
+Condition=last_line_fields(2).Value.StartsWith(".")
 ```
 ### Getting 1st value 
 ```java
