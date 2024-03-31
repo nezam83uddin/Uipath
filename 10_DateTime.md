@@ -1,5 +1,14 @@
 ## 1. DateTime
 
+```java
+CurrentWeek=GetTodayDate.AddDays((-1*GetTodayDate.DayOfWeek)+1)
+LastWeek=CurrentWeek.AddDays(-7)
+bool_IsToday=CInt(Date.Today.DayOfWeek)=1
+```
+
+
+
+
 
 ### 2. Filter different formation of date
 
