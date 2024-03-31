@@ -23,7 +23,7 @@ DirectCast(Config("dt_ReportTemplate"),DataTable)
 
 
 
-### For GetTransaction Data
+### For Single Transaction (GetTransaction Data)
 
 |Variable Type|Syntax|
 |:----|:----|
