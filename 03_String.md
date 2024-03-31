@@ -29,12 +29,35 @@ CurrentRow.Item("str_Name").ToString.PadLeft(9,"0"c)
 
 
 ```scala
+str_GetTextForCredit.Substring(str_GetTextForCredit.LastIndexOf("TOTAL CREDITS")).Replace(",","")
+```
+
+```scala
+strPdfText.Split({Environment.NewLine},StringSplitOptions.None)
+```
+
+
+
+### String Manipulation
+
+
+```scala
 String.Format("*Test_ToC_{0}.csv", in_ProcessDate.ToString("yyMMdd"))
+```
+```scala
+Split(Dr, "*** GRAND TOTALS ***")(1)
 ```
 
 ```java
 str_Vaccine = String.Join(vbCrLf,str_Vaccine.Split(Environment.NewLine.ToArray,StringSplitOptions.RemoveEmptyEntries))
 ```
+```java
+str_Vaccine = System.Text.RegularExpressions.Regex.Replace(str_GetTextForCredit,"\s+"," ")
+```
+```java
+str_Vaccine = System.Text.RegularExpressions.Regex.Match(str_GetTextForCredit,"(?<=TOTAL\sCREDITS\*\s)(\d+\.\d+|\.\d+)").Value
+```
+
 ```java
 str_Vaccine = System.Text.RegularExpressions.Regex.Replace(str_Vaccine,"\s+"," ",System.Text.RegularExpressions.RegexOptions.Multiline).Trim
 ```
