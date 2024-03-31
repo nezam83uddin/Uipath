@@ -42,3 +42,16 @@ str_Vaccine = System.Text.RegularExpressions.Regex.Replace(str_Vaccine,"^-"," ",
 ```java
 str_Vaccine = System.Text.RegularExpressions.Regex.Replace(str_Vaccine,"-$"," ",System.Text.RegularExpressions.RegexOptions.Multiline).Trim
 ```
+
+### Match Activities
+
+
+```scala
+System.Text.RegularExpressions.Regex.Replace(Test_Data, "[\r?\n]{2,}", vbcrlf).Trim
+```
+
+
+```scala
+If(str_MachineName(0).Groups(1).Value IsNot Nothing, str_MachineName(0).Groups(1).Value, " ")
+```
+
