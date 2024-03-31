@@ -13,6 +13,16 @@ Exception = SystemException isNot Nothing or BusinessException IsNot Nothing
 Log Message = if(SystemException IsNot Nothing, "System exception at initialization: " + SystemException.Message + " at Source: " + SystemException.Source, "Business exception at initialization: " + BusinessException.Message + " at Source: " + BusinessException.Source)
 ```
 
+### For Browser or Report
+```scala
+in_Config.Keys.Contains("Browser_Name")
+DirectCast(in_Config("Browser_Eport"),Browser)
+Config.Keys.Contains("dt_ReportTemplate") And Config.Keys.Contains("OutputPath") And Config.Keys.Contains("FileFourReport")
+DirectCast(Config("dt_ReportTemplate"),DataTable)
+```
+
+
+
 ### For GetTransaction Data
 
 |Variable Type|Syntax|
