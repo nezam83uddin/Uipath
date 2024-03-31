@@ -1,3 +1,8 @@
+## 1. Math (Getting 2 digit)
+
+```scala
+math.round(Credit_List.Sum,2)
+```
 ## 1. DateTime
 
 ```java
