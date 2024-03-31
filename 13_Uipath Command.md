@@ -18,7 +18,17 @@ Services
 UIPATH_USER_SERVICE_PATH = C:\Users\Sajib\AppData\Local\Programs\UiPath\Studio\UiPath.Service.UserHost.exe
 ```
 
-### creat start.vbs to wake up machine
+### Avoiding Restore Page in Chrome
+
+```java
+"C:\Users\"+environment.UserName+"\AppData\Local\Google\Chrome\User Data\Default\Preferences"
+```
+
+```java
+str_preferenceText.Replace(Chr(34)+"exit_type"+Chr(34)+":"+Chr(34)+"Crashed"+Chr(34),Chr(34)+"exit_type"+Chr(34)+":"+Chr(34)+"Normal"+Chr(34))
+```
+
+### create start.vbs to wake up machine
 ```scala
 set wsc = CreateObject("WScript.Shell")
 Do
