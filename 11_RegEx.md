@@ -18,3 +18,25 @@ if(Name(0).Groups(1).Value IsNot Nothing, Name(0).Groups(1).Value, " ")
 ```java
 If(o_MemberName IsNot Nothing, """"+o_MemberName+"""", """"+" "+"""" )
 ```
+### Regex | String
+```java
+str_Vaccine = System.Text.RegularExpressions.Regex.Replace(str_GetTextForCredit,"\s+"," ")
+```
+```java
+str_Vaccine = System.Text.RegularExpressions.Regex.Match(str_GetTextForCredit,"(?<=TOTAL\sCREDITS\*\s)(\d+\.\d+|\.\d+)").Value
+```
+
+```java
+str_Vaccine = System.Text.RegularExpressions.Regex.Replace(str_Vaccine,"\s+"," ",System.Text.RegularExpressions.RegexOptions.Multiline).Trim
+```
+```java
+str_Vaccine =System.Text.RegularExpressions.Regex.Replace(strPdfText,"\s+"," ",System.Text.RegularExpressions.RegexOptions.Singleline).Trim
+
+```
+```java
+str_Vaccine = System.Text.RegularExpressions.Regex.Replace(str_Vaccine,"^-"," ",System.Text.RegularExpressions.RegexOptions.Multiline).Trim
+```
+
+```java
+str_Vaccine = System.Text.RegularExpressions.Regex.Replace(str_Vaccine,"-$"," ",System.Text.RegularExpressions.RegexOptions.Multiline).Trim
+```
