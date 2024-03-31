@@ -109,14 +109,3 @@ string.format("{0}\{1}\",Config("ReportFolder").ToString.Trim, "ExceptionScreens
 System.Text.RegularExpressions.Regex.Replace(str_RowText,"\s+"," ",System.Text.RegularExpressions.RegexOptions.Multiline).Trim
 ```
 
-# Link
-
-
-```scala
-System.Text.RegularExpressions.Regex.Replace(Test_Data, "[\r?\n]{2,}", vbcrlf).Trim
-```
-
-
-```scala
-If(str_MachineName(0).Groups(1).Value IsNot Nothing, str_MachineName(0).Groups(1).Value, " ")
-```
