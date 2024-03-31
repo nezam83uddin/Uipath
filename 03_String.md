@@ -51,27 +51,7 @@ Split(Dr, "*** GRAND TOTALS ***")(1)
 ```java
 str_Vaccine = String.Join(vbCrLf,str_Vaccine.Split(Environment.NewLine.ToArray,StringSplitOptions.RemoveEmptyEntries))
 ```
-```java
-str_Vaccine = System.Text.RegularExpressions.Regex.Replace(str_GetTextForCredit,"\s+"," ")
-```
-```java
-str_Vaccine = System.Text.RegularExpressions.Regex.Match(str_GetTextForCredit,"(?<=TOTAL\sCREDITS\*\s)(\d+\.\d+|\.\d+)").Value
-```
 
-```java
-str_Vaccine = System.Text.RegularExpressions.Regex.Replace(str_Vaccine,"\s+"," ",System.Text.RegularExpressions.RegexOptions.Multiline).Trim
-```
-```java
-str_Vaccine =System.Text.RegularExpressions.Regex.Replace(strPdfText,"\s+"," ",System.Text.RegularExpressions.RegexOptions.Singleline).Trim
-
-```
-```java
-str_Vaccine = System.Text.RegularExpressions.Regex.Replace(str_Vaccine,"^-"," ",System.Text.RegularExpressions.RegexOptions.Multiline).Trim
-```
-
-```java
-str_Vaccine = System.Text.RegularExpressions.Regex.Replace(str_Vaccine,"-$"," ",System.Text.RegularExpressions.RegexOptions.Multiline).Trim
-```
 
 ```scala
 str_DateField = split(str_RowText,environment.newline)(0)
