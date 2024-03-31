@@ -25,7 +25,7 @@ CurrentRow.Item("str_Name").ToString.PadLeft(9,"0"c)
 
 ```
 
-
+### String Manipulation
 
 
 ```scala
