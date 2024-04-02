@@ -14,6 +14,12 @@ Regex.Replace(str_Name,"\s","")
 
 ```
 
+### Removing tab and newline and keeping in the single line
+```scala
+System.Text.RegularExpressions.Regex.Replace(str_Vaccine,"\s+"," ",System.Text.RegularExpressions.RegexOptions.Multiline).Trim
+
+```
+
 
 ```scala
 strPdfText.Split({Environment.NewLine},StringSplitOptions.None)
