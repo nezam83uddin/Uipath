@@ -19,6 +19,7 @@ CurrentFile.Name.Contains(cdate(in_ProcessDate).ToString("MMddyy"))
 Path.GetFileNameWithoutExtension(str_FilePath)
 Path.GetFileName(str_FilePath)
 Directory.GetCurrentDirectory
+new FileInfo(eltropyConfigPath).DirectoryName
 
 ```
 
