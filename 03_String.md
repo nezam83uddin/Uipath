@@ -8,6 +8,12 @@ String Manipulation ([Link.....](https://forum.uipath.com/t/how-to-manipulate-a-
 System.Text.RegularExpressions.Regex.Replace(variable, "[^a-z A-Z 0-9]", "")
 
 ```
+### Removing white spaces, tab and newline and keeping in the single line
+```scala
+Regex.Replace(str_Name,"\s","")
+
+```
+
 
 ```scala
 strPdfText.Split({Environment.NewLine},StringSplitOptions.None)
