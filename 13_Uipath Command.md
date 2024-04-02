@@ -9,6 +9,13 @@ shell:startup
 %appdata%
 ```
 
+### Checking Uipath log
+```scala
+\\VDI-RPA-1\c$\Users\User Profile\Documents\UiPath
+```
+
+
+
 
 ### Setting for Services
 ```scala
