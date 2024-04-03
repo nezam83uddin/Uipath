@@ -11,6 +11,7 @@ System.Text.RegularExpressions.Regex.Replace(variable, "[^a-z A-Z 0-9]", "")
 ### Removing white spaces, tab and newline and keeping in the single line
 ```scala
 Regex.Replace(str_Name,"\s","")
+String.Join(" ",str_DownloadPath.Split({" "},StringSplitOptions.RemoveEmptyEntries))
 
 ```
 
@@ -18,12 +19,13 @@ Regex.Replace(str_Name,"\s","")
 ```scala
 System.Text.RegularExpressions.Regex.Replace(str_Vaccine,"\s+"," ",System.Text.RegularExpressions.RegexOptions.Multiline).Trim
 
+
 ```
 
 ### Removing tab and newline and keeping in the single line
 ```scala
-String.Join(" ",str_DownloadPath.Split({" "},StringSplitOptions.RemoveEmptyEntries))
 
+String.Join(" ",Regex.Replace(str_Vaccine,"\t","").Split({" "},StringSplitOptions.RemoveEmptyEntries))
 ```
 
 
