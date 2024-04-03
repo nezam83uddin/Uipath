@@ -20,6 +20,12 @@ System.Text.RegularExpressions.Regex.Replace(str_Vaccine,"\s+"," ",System.Text.R
 
 ```
 
+### Removing tab and newline and keeping in the single line
+```scala
+String.Join(" ",str_DownloadPath.Split({" "},StringSplitOptions.RemoveEmptyEntries))
+
+```
+
 
 ```scala
 strPdfText.Split({Environment.NewLine},StringSplitOptions.None)
