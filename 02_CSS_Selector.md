@@ -1,3 +1,10 @@
+
+### CSS Selector
+```java
+css-selector='span[uipath_custom_id="12"]' 
+```
+
+
 # CSS Selector
 
 |tagName[attributename=attributeValue]|
@@ -15,7 +22,7 @@
 |<webctrl aaname='First name:' css-selector='label:nth-of-type(4)' />|
 
 
-css-selector='span[uipath_custom_id="12"]' 
+
 
 ### CSS Selector Link
 https://www.seleniumeasy.com/selenium-tutorials/css-selectors-tutorial-for-selenium-with-examples
