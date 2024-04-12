@@ -1,7 +1,9 @@
 ## 1. Adding Staring Date, Ending Date and total duration of each process
 
 ```java
-
+dateTime_startTime=DateAndTime.Now
+dateTime_endTime=System.DateTime.Now
+str_TotalTimeInSec=math.Round((dateTime_endTime-dateTime_startTime).TotalSeconds,2).ToString
 ```
 
 ```java
