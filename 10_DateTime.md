@@ -1,3 +1,17 @@
+## 1. Adding Staring Date, Ending Date and total duration of each process
+
+```java
+
+```
+
+```java
+CurrentWeek=GetTodayDate.AddDays((-1*GetTodayDate.DayOfWeek)+1)
+LastWeek=CurrentWeek.AddDays(-7)
+bool_IsToday=CInt(Date.Today.DayOfWeek)=1
+```
+
+
+
 ## 1. Math (Getting 2 digit)
 
 ```scala
