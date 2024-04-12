@@ -5,7 +5,7 @@ dateTime_startTime = DateAndTime.Now
 dateTime_endTime = System.DateTime.Now
 str_TotalTimeInSec = math.Round((dateTime_endTime-dateTime_startTime).TotalSeconds,2).ToString
 ```
-
+## 1. Getting week and day
 ```java
 CurrentWeek=GetTodayDate.AddDays((-1*GetTodayDate.DayOfWeek)+1)
 LastWeek=CurrentWeek.AddDays(-7)
