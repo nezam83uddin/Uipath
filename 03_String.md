@@ -44,6 +44,11 @@ CInt("".ToString).ToString("000000000")
 CurrentRow.Item("str_Name").ToString.PadLeft(9,"0"c)
 
 ```
+```scala
+CInt(CurrentRow("id").ToString).ToString("000000000")
+
+```
+
 
 ### String Manipulation
 
