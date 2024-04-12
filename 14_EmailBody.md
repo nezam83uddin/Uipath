@@ -32,7 +32,7 @@
 <p></p>
 <p></p>
 <div class="w3-container w3-teal w3-left" style="width:100%"> <h4> Thanks & Regards </h4> <h4> Quality Assurance & Change Management </h4>
-<p>Important Note: This is auto-generated email. Please do not reply to this mail. if you have any query or need support you can reach out to <a href='nezam.uddin@vacu.org' style='display:inline-block;color:yellow'>nezam.uddin@vacu.org </a> </p>
+<p>Important Note: This is auto-generated email. Please do not reply to this mail. if you have any query or need support you can reach out to <a href='nbc@gmail.com' style='display:inline-block;color:yellow'>nezam.uddin@vacu.org </a> </p>
 </div>
 </body>
 
@@ -65,7 +65,7 @@
 <p></p>
 <p></p>
 <div class="w3-container w3-teal w3-left" style="width:100%"> <h4> Thanks & Regards </h4> <h4> Quality Assurance & Change Management </h4>
-<p>Important Note: This is auto-generated email. Please do not reply to this mail. if you have any query or need support you can reach out to <a href='nezam.uddin@vacu.org' style='display:inline-block;color:yellow'>nezam.uddin@vacu.org </a> </p>
+<p>Important Note: This is auto-generated email. Please do not reply to this mail. if you have any query or need support you can reach out to <a href='abc@gmail.com' style='display:inline-block;color:yellow'>nezam.uddin@vacu.org </a> </p>
 </div>
 </body>
 
