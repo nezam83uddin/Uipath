@@ -1,5 +1,10 @@
 # ReFramwork
 
+### For Using UiPath Version
+```scala
+"UiPath": "[23.4.60.24910]",
+```
+
 ### For Using in the Condition in state
 ```scala
 Successfull = SystemException is Nothing And BusinessException is Nothing
