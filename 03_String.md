@@ -1,4 +1,17 @@
 
+## TryCast
+(TryCast(PatientDetails.item(colIndex),Dictionary (Of String, String))("AKA").ToString).Split("|"c)
+
+TryCast(PatientDetails.Item(pendingIndex),Dictionary (Of String, String))
+
+TryCast(patientDetails.Item(0), Dictionary(Of String, String))
+
+
+
+
+
+
+
 ## StingManipulation 
 String Manipulation ([Link.....](https://forum.uipath.com/t/how-to-manipulate-a-part-of-string-split-trim-substring-replace-remove-left-right/140180))
 
