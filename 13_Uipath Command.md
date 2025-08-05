@@ -1,4 +1,17 @@
 
+
+
+### UiPath Enviorment Varialble Setup
+```scala
+UIPATH_USER_SERVICE_PATH C:\Program Files\UiPath\Studio\UiPath.Service.UserHost.exe
+UIPATH_SESSION_TIMEOUT 240
+UATDATA C:\Windows\CCM\UATData\D9F8C395-CAB8-491d-B8AC-179A1FE1BE77
+UIPATH_LANGUAGE en
+C:\Users\appqamonitor\.nuget\packages\uipath.emgucvbundle
+```
+
+
+
 ### Place Uipath Assistance in Startup
 
 ```scala
