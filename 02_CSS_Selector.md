@@ -4,6 +4,10 @@
 css-selector='span[uipath_custom_id="12"]' 
 ```
 
+```UiPath Or Selectors
+<webctrl css-selector='input[id="id1"], input[name*="id2" i]' />
+```
+
 
 # CSS Selector
 
