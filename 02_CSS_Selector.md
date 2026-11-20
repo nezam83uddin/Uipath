@@ -21,6 +21,15 @@ css-selector='span[uipath_custom_id="12"]'
 |div[class$=Error i]|
 |<webctrl aaname='First name:' css-selector='label:nth-of-type(4)' />|
 
+<webctrl css-selector='input[id="id1"], input[name*="id2" i]' />
+ <input
+      type="text"
+      id="id3"
+      name="id2"
+      placeholder="Enter your username"
+      aria-label="usernames"
+<webctrl css-selector='input[id="id1"], input[name*="id2" i]' />
+
 
 
 
