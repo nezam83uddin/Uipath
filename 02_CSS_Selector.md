@@ -4,8 +4,16 @@
 css-selector='span[uipath_custom_id="12"]' 
 ```
 
-```UiPath Or Selectors
-<webctrl css-selector='input[id="id1"], input[name*="id2" i]' />
+### UiPath Or operator
+```java
+<webctrl css-selector='input[id=&quot;id1&quot;], input[name*=&quot;id2&quot; i]' casesensitive:css-selector='false' />
+<webctrl css-selector='input[id=&quot;id1&quot;], input[name*=&quot;id2&quot; i]' casesensitive:css-selector='false' />
+```
+
+### UiPath And operator
+```java
+<webctrl css-selector='input[id="username"][name="username"]' casesensitive:css-selector='false' />
+<webctrl css-selector='input[id=&quot;id1&quot;][name=&quot;id2&quot;]' casesensitive:css-selector='false' />
 ```
 
 
