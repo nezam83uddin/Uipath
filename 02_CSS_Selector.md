@@ -1,4 +1,47 @@
 
+## CSS Attribute Selector: `name`
+
+### `=` — হুবহু মিল
+
+```css
+input[name="username"]
+```
+
+উদাহরণ: `<input name="username">` মিলবে।
+
+### `*=` — মানের যেকোনো অংশে লেখাটি থাকলে মিল
+
+```css
+input[name*="username"]
+```
+
+উদাহরণ: `<input name="login-username-field">` মিলবে, কারণ `username` মাঝখানে আছে।
+
+### `$=` — মানের শেষে লেখাটি থাকলে মিল
+
+```css
+input[name$="username"]
+```
+
+উদাহরণ: `<input name="login-username">` মিলবে, কারণ মানটি `username` দিয়ে শেষ হয়েছে।
+
+### `i` — বড়-ছোট হাতের পার্থক্য উপেক্ষা
+
+```css
+input[name*="username" i]
+```
+
+উদাহরণ: `<input name="LOGIN-USERNAME-FIELD">` মিলবে, কারণ `i` অক্ষরের case উপেক্ষা করে।
+
+### UiPath selector
+
+```xml
+<webctrl css-selector='input[name="username"], input[name*="username" i], input[name$="username" i]' />
+```
+
+কমা `,` হলো OR: যেকোনো একটি শর্ত মিললেই ইনপুটটি match হবে।
+
+
 ### CSS Selector
 ```java
 css-selector='span[uipath_custom_id="12"]' 
@@ -6,12 +49,14 @@ css-selector='span[uipath_custom_id="12"]'
 
 ### UiPath Or operator
 ```java
-<webctrl css-selector='input[id=&quot;id1&quot;], input[name*=&quot;id2&quot; i]' casesensitive:css-selector='false' />
+তফাত হলো, Or হলে কমা থাকবে।
+<webctrl css-selector='input[id="id1"], input[name*="id2" i]' casesensitive:css-selector='false' />
 <webctrl css-selector='input[id=&quot;id1&quot;], input[name*=&quot;id2&quot; i]' casesensitive:css-selector='false' />
 ```
 
 ### UiPath And operator
 ```java
+তফাত হলো, And হলে কমা থাকবে না।
 <webctrl css-selector='input[id="username"][name="username"]' casesensitive:css-selector='false' />
 <webctrl css-selector='input[id=&quot;id1&quot;][name=&quot;id2&quot;]' casesensitive:css-selector='false' />
 ```
