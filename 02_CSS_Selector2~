@@ -1,1 +1,164 @@
 
+# UiPath CSS Selector-এ `~` ও `~=`
+
+CSS-এ এই চিহ্নের দুইটি কাজ আছে।
+
+| কী লিখবেন | কী খুঁজবে |
+|---|---|
+| `[class~="ext-input"]` | class-এর তালিকায় `ext-input` নামে পুরো একটি class |
+| `label ~ input` | একই parent-এর ভেতরে `label`-এর পরে থাকা `input` |
+
+## ১. `~=` দিয়ে পুরো শব্দ খোঁজা
+
+ধরুন, একটা বাক্সে তিনটি স্টিকার আছে। স্টিকারগুলোর নাম `big`, `red` ও `round`। `~=` দিয়ে বলছেন, “এই স্টিকারগুলোর মধ্যে ঠিক `red` নামে একটা আছে কি?”
+
+### উদাহরণ ১ — class
+
+```xml
+<webctrl css-selector='input[class~="ext-input"]' />
+```
+
+| HTML-এ যা আছে | মিলবে? | কেন |
+|---|---|---|
+| `class="ext-input"` | হ্যাঁ | পুরো class-টির নাম `ext-input` |
+| `class="form-control ext-input"` | হ্যাঁ | `ext-input` আলাদা একটি class |
+| `class="ext-input   form-control"` | হ্যাঁ | কয়েকটি স্পেস থাকলেও class আলাদা বোঝা যায় |
+| `class="ext-input-large"` | না | পুরো class-এর নাম `ext-input-large` |
+| `class="EXT-INPUT"` | না | এই selector-এ অক্ষরের case মেলাতে হবে |
+
+একটি পুরো class খোঁজার একই কাজ ডট দিয়েও লেখা যায়।
+
+```xml
+<webctrl css-selector='input.ext-input' />
+```
+
+### উদাহরণ ২ — class-এ বড় ও ছোট হাতের অক্ষর উপেক্ষা
+
+```xml
+<webctrl css-selector='input[class~="EXT-INPUT" i]' />
+```
+
+`class="form-control ext-input"` মিলবে। `]`-এর আগে `i` দিলে বড় বা ছোট হাতের ইংরেজি অক্ষর একই ধরে। `ext-input-large` তবুও মিলবে না, কারণ পুরো class-এর নাম আলাদা।
+
+### উদাহরণ ৩ — name
+
+```xml
+<webctrl css-selector='input[name~="passwd"]' />
+```
+
+`name="passwd"` আর `name="login passwd"` মিলবে। `name="login-passwd"` মিলবে না। স্পেস দুটি শব্দ আলাদা করে। হাইফেন শব্দটিকে দুই ভাগে ভাঙে না। পুরো name ঠিক `passwd` হলেই মিল চান? তাহলে নিচেরটি লিখুন।
+
+```xml
+<webctrl css-selector='input[name="passwd"]' />
+```
+
+### উদাহরণ ৪ — ID
+
+```xml
+<webctrl css-selector='input[id~="i0118"]' />
+```
+
+`id="i0118"` মিলবে, কারণ মানটাই একটি পুরো শব্দ। `id="login-i0118"` মিলবে না। বৈধ HTML ID-তে স্পেস থাকে না। তাই ID হুবহু মেলাতে সাধারণত এভাবে লেখা সহজ।
+
+```xml
+<webctrl css-selector='input#i0118' />
+```
+
+### উদাহরণ ৫ — aria-label
+
+```xml
+<webctrl css-selector='input[aria-label~="password" i]' />
+```
+
+`aria-label="Enter the PASSWORD"` মিলবে। এখানে `PASSWORD` আলাদা একটি শব্দ। `aria-label="Enter the password!"` মিলবে না, কারণ শব্দের সঙ্গে `!` লেগে আছে।
+
+পুরো `Enter the password` বাক্যাংশ খুঁজতে `*=` ব্যবহার করুন। `~=`-এর ডান পাশে স্পেসসহ একাধিক শব্দ দিলে মিল হবে না।
+
+```xml
+<webctrl css-selector='input[aria-label*="Enter the password" i]' />
+```
+
+### উদাহরণ ৬ — একই input-এ দুইটি পুরো class
+
+```xml
+<webctrl css-selector='input[class~="form-control"][class~="EXT-INPUT" i]' />
+```
+
+এটি AND। একই input-এ `form-control` এবং `ext-input` দুটোই থাকতে হবে। এখানে `i` শুধু `EXT-INPUT` শর্তে কাজ করে।
+
+### উদাহরণ ৭ — দুইটি class-এর যেকোনো একটি
+
+```xml
+<webctrl css-selector='input[class~="ext-input"], input[class~="form-control"]' />
+```
+
+এটি OR। দুইটি class-এর যেকোনো একটি থাকলেই input মিলবে।
+
+## ২. `~` একা দিয়ে পরে থাকা element খোঁজা
+
+ধরুন, সব element একটা লাইনে দাঁড়িয়ে আছে। `label ~ input` মানে “একই লাইনে label-এর পরে যত input আছে, সেগুলো খোঁজো।”
+
+এই HTML-টি দেখুন।
+
+```html
+<form>
+  <input id="before">
+  <label for="i0118">Password</label>
+  <span>নির্দেশনা</span>
+  <input id="i0118" name="passwd" class="ext-input">
+  <div>
+    <input id="nested">
+  </div>
+  <input id="confirm" name="confirm">
+</form>
+```
+
+### উদাহরণ ১ — label-এর পরে থাকা input
+
+```xml
+<webctrl css-selector='label ~ input' />
+```
+
+`i0118` ও `confirm` মিলবে। তারা একই form-এর সরাসরি child এবং label-এর পরে আছে। `before` আগে আছে। `nested`-এর সরাসরি parent হলো div, তাই সেটিও মিলবে না। মাঝখানে span বা div থাকলেও পরে থাকা input মেলে।
+
+### উদাহরণ ২ — পরে থাকা input-এর ID-ও মেলান
+
+```xml
+<webctrl css-selector='label ~ input#i0118' />
+```
+
+শুধু `i0118` মিলবে। ডান পাশের `input#i0118` হলো যেটিকে খুঁজছেন।
+
+### উদাহরণ ৩ — কোথা থেকে খোঁজা শুরু হবে তা নির্দিষ্ট করুন
+
+```xml
+<webctrl css-selector='label[for="i0118"] ~ input' />
+```
+
+`for="i0118"` থাকা label-এর পরের `i0118` ও `confirm` দুটোই মিলবে। `~` এখানে label-এর সঙ্গে যুক্ত input আলাদা করে চিনে না। শুধু HTML-এ কোনটি পরে আছে, তা দেখে।
+
+### উদাহরণ ৪ — পরে থাকা input-এর name মেলান
+
+```xml
+<webctrl css-selector='label ~ input[name="PASSWD" i]' />
+```
+
+শুধু `i0118` মিলবে। `i` শুধু name-এর বড় ও ছোট হাতের অক্ষরের পার্থক্য উপেক্ষা করে।
+
+### উদাহরণ ৫ — একই selector-এ `~` ও `~=`
+
+```xml
+<webctrl css-selector='label ~ input[class~="ext-input"]' />
+```
+
+বাইরের `~` বলছে input-টি একই parent-এর ভেতরে label-এর পরে থাকতে হবে। ভেতরের `~=` বলছে input-টির class তালিকায় `ext-input` থাকতে হবে। এই HTML-এ শুধু `i0118` মিলবে।
+
+### `~` আর `+`-এর পার্থক্য
+
+`+` দিয়ে একদম পরের element-টি দেখা হয়। উপরের HTML-এ label-এর ঠিক পরের element হলো span। তাই নিচের selector কোনো input মেলাবে না।
+
+```xml
+<webctrl css-selector='label + input' />
+```
+
+UiPath UI Explorer-এ একবারে একটি selector বসিয়ে **Validate → Highlight** করলে কোন element ধরা পড়ছে দেখতে পাবেন।
