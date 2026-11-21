@@ -36,6 +36,11 @@
 **ID হুবহু মেলান, case উপেক্ষা করে**
 
 ```xml
+i flag দিলে css-selector-এর ভেতরে ID-এর মান বড় বা ছোট হাতের যেকোনোভাবে লিখতে পারবেন।
+```
+
+
+```xml
 <webctrl css-selector='input[id="I0118" i]' />
 ```
 
