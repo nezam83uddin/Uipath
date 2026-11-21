@@ -52,6 +52,23 @@ input[name="passwd"]
 input[aria-label*="Enter the password" i]
 ```
 
+### ID selector-এ `i` flag
+
+`#i0118` হলো ID selector। এর শেষে `i` যোগ করলে case-insensitive হয় না—এটি case-sensitive-ই থাকে।
+
+```css
+#i0118
+```
+
+ID-কে case-insensitive করতে attribute selector ব্যবহার করে `i` flag দিন:
+
+```css
+[id="i0118" i]
+```
+
+`#i0118 i` লিখলে সেটি `#i0118` element-এর ভেতরের `<i>` element খোঁজে।
+
+
 ## `i`-এর মানে ও অবস্থান
 
 `i` ওই একটি attribute condition-এ ইংরেজি অক্ষরের uppercase/lowercase পার্থক্য উপেক্ষা করে। এটি closing `]`-এর আগে, উদ্ধৃত মানের পরে বসে। এটি global নয়; যে condition case-insensitive করতে চান, তার ভেতরে আলাদা করে `i` দিতে হবে।
